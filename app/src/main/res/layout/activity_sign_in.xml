@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <EditText
+        android:id="@+id/SignInName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="이름"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SignInEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="이메일"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/SignInName"
+        app:layout_constraintStart_toStartOf="@+id/SignInName"
+        app:layout_constraintTop_toBottomOf="@+id/SignInName" />
+
+    <EditText
+        android:id="@+id/SignInId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="아이디"
+        app:layout_constraintEnd_toEndOf="@+id/SignInEmail"
+        app:layout_constraintStart_toStartOf="@+id/SignInEmail"
+        app:layout_constraintTop_toBottomOf="@+id/SignInEmail" />
+
+    <CheckBox
+        android:id="@+id/SignInCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일 사용"
+        app:layout_constraintEnd_toEndOf="@+id/SignInId"
+        app:layout_constraintStart_toStartOf="@+id/SignInId"
+        app:layout_constraintTop_toBottomOf="@+id/SignInId" />
+
+    <EditText
+        android:id="@+id/SignInPw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/SignInId"
+        app:layout_constraintStart_toStartOf="@+id/SignInId"
+        app:layout_constraintTop_toBottomOf="@+id/SignInCheckBox" />
+
+    <TextView
+        android:id="@+id/SignInPw1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 입력"
+        app:layout_constraintBottom_toBottomOf="@+id/SignInPw1"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPw1"
+        app:layout_constraintStart_toStartOf="@+id/SignInPw1"
+        app:layout_constraintTop_toTopOf="@+id/SignInPw1" />
+
+    <EditText
+        android:id="@+id/SignInPw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPw1"
+        app:layout_constraintStart_toStartOf="@+id/SignInPw1"
+        app:layout_constraintTop_toBottomOf="@+id/SignInPw1" />
+
+    <TextView
+        android:id="@+id/SignInPw2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 확인"
+        app:layout_constraintBottom_toBottomOf="@+id/SignInPw2"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPw2"
+        app:layout_constraintStart_toStartOf="@+id/SignInPw2"
+        app:layout_constraintTop_toTopOf="@+id/SignInPw2" />
+
+    <CheckBox
+        android:id="@+id/SignInAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="약관에 동의합니다"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPw2"
+        app:layout_constraintStart_toStartOf="@+id/SignInPw2"
+        app:layout_constraintTop_toBottomOf="@+id/SignInPw2" />
+
+    <Button
+        android:id="@+id/SignInPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="회원 가입"
+        app:layout_constraintEnd_toEndOf="@+id/SignInAgree"
+        app:layout_constraintStart_toStartOf="@+id/SignInAgree"
+        app:layout_constraintTop_toBottomOf="@+id/SignInAgree" />
+
+    <Button
+        android:id="@+id/SignInCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="취소"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPass"
+        app:layout_constraintStart_toStartOf="@+id/SignInPass"
+        app:layout_constraintTop_toBottomOf="@+id/SignInPass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        buildConfig = true
+        dataBinding = true
+        viewBinding = true
+    }
 }
+
 
 dependencies {
 
@@ -57,7 +63,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //material-components-android
-    implementation ("com.google.android.material:material:1.13.0")
+    //implementation ("com.google.android.material:material:1.13.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
