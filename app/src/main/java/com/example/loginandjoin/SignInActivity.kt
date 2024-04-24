@@ -1,6 +1,7 @@
 package com.example.loginandjoin
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -109,7 +110,8 @@ class SignInActivity : AppCompatActivity() {
                                     //약관동의
                                     if (pref.getInt("agree", 0)==1){
                                         //회원가입 준비완료
-                                        Toast.makeText(this,"회원가입 준비완료", Toast.LENGTH_SHORT).show()
+                                        val login = Intent(this,LoginAfter::class.java)
+                                        startActivity(login)
                                     }
                                     else{
                                         //약관 거부

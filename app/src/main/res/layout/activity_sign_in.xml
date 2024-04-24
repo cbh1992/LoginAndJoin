@@ -94,16 +94,6 @@
         app:layout_constraintStart_toStartOf="@+id/SignInPw2"
         app:layout_constraintTop_toTopOf="@+id/SignInPw2" />
 
-    <TextView
-        android:id="@+id/SignInPwError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="비밀번호가 일치하지 않습니다"
-        app:layout_constraintEnd_toEndOf="@+id/SignInPw2"
-        app:layout_constraintStart_toStartOf="@+id/SignInPw2"
-        app:layout_constraintTop_toBottomOf="@+id/SignInPw2" />
-
     <CheckBox
         android:id="@+id/SignInAgree"
         android:layout_width="wrap_content"
