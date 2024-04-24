@@ -48,9 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        //회원가입으로 즉시 이동하는 바이패스.  이후 삭제해야함
-        val temp = Intent(this,SignInActivity::class.java)
-        startActivity(temp)
+
 
         binding.button.setOnClickListener {
             val signIn = Intent(this,SignInActivity::class.java)
