@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/MainSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -17,4 +17,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/MainKakao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/MainSign"
+        app:layout_constraintEnd_toEndOf="@+id/MainSign"
+        app:layout_constraintStart_toStartOf="@+id/MainSign"
+        app:srcCompat="@drawable/kakao_login_medium_narrow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

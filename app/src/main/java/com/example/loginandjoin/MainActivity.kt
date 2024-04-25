@@ -1,13 +1,20 @@
 package com.example.loginandjoin
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.loginandjoin.databinding.ActivityMainBinding
+import com.kakao.sdk.auth.model.OAuthToken
+import com.kakao.sdk.common.model.ClientError
+import com.kakao.sdk.common.model.ClientErrorCause
+import com.kakao.sdk.common.util.Utility
+import com.kakao.sdk.user.UserApiClient
 import dagger.hilt.android.HiltAndroidApp
 import retrofit2.Call
 import retrofit2.Callback
@@ -48,9 +55,19 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        binding.MainKakao.setOnClickListener {
+            //카카오 로그인 클릭
+            UserApiClient.instance.loginWithKakaoTalk(this) { token, error ->
+                if (error != null) {
+                    Log.e(TAG, "로그인 실패", error)
+                }
+                else if (token != null) {
+                    Log.i(TAG, "로그인 성공 ${token.accessToken}")
+                }
+            }
+        }
 
-
-        binding.button.setOnClickListener {
+        binding.MainSign.setOnClickListener {
             val signIn = Intent(this,SignInActivity::class.java)
             startActivity(signIn)
         }
