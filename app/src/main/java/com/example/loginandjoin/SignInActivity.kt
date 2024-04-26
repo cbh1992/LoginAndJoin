@@ -111,6 +111,7 @@ class SignInActivity : AppCompatActivity() {
                                     if (pref.getInt("agree", 0)==1){
                                         //회원가입 준비완료
                                         val login = Intent(this,LoginAfter::class.java)
+                                        login.putExtra("LoginType", "회원가입")
                                         startActivity(login)
                                     }
                                     else{

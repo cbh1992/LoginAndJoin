@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 else if (token != null) {
                     Log.i(TAG, "로그인 성공 ${token.accessToken}")
+                    val socialLogin = Intent(this,LoginAfter::class.java)
+                    socialLogin.putExtra("LoginType", "카카오")
+                    startActivity(socialLogin)
+
                 }
             }
         }

@@ -3,10 +3,12 @@ package com.example.loginandjoin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isGone
 
 class LoginAfter : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,13 @@ class LoginAfter : AppCompatActivity() {
         }
         val payment = findViewById<Button>(R.id.Payment)
         val logout = findViewById<Button>(R.id.Logout)
+        val text = findViewById<TextView>(R.id.HowtoLogin)
+
+        if(intent.hasExtra("LoginType")){
+            text.text = intent.getStringExtra("LoginType")
+        }else{
+            text.isGone
+        }
 
         payment.setOnClickListener {
             val pay = Intent(this,Payment::class.java)
