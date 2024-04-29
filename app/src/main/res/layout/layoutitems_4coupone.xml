@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/CouponeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CouponeTitle"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CouponeSelect"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:hint="쿠폰"
+                app:layout_constraintEnd_toStartOf="@+id/CouponeCouponeInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CouponeTitle">
+
+                <AutoCompleteTextView
+                    android:id="@+id/CouponCouponSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/CouponeCouponeInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="등록"
+                app:layout_constraintBottom_toBottomOf="@+id/CouponeSelect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/CouponeSelect" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CouponePoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/CouponePointInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CouponeSelect"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/CouponePointText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ems="10"
+                    android:hint="포인트"
+                    android:inputType="number"
+                    android:textSize="13sp"
+                    tools:ignore="MissingConstraints" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/CouponePointInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="등록"
+                app:layout_constraintBottom_toBottomOf="@+id/CouponePoint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/CouponePoint" />
+
+            <TextView
+                android:id="@+id/CouponePointHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="CouponePointHave"
+                app:layout_constraintStart_toStartOf="@+id/CouponePoint"
+                app:layout_constraintTop_toBottomOf="@+id/CouponePoint" />
+
+            <TextView
+                android:id="@+id/CouponeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="CouponeInfo"
+                app:layout_constraintStart_toStartOf="@+id/CouponePointHave"
+                app:layout_constraintTop_toBottomOf="@+id/CouponePointHave" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

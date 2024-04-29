@@ -31,7 +31,7 @@ class LoginAfter : AppCompatActivity() {
         }
 
         payment.setOnClickListener {
-            val pay = Intent(this,Payment::class.java)
+            val pay = Intent(this,PayPage::class.java)
             startActivity(pay)
         }
         logout.setOnClickListener { 
