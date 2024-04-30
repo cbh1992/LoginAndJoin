@@ -21,32 +21,22 @@
                 android:text="CouponeTitle"
                 tools:ignore="MissingConstraints" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
                 android:id="@+id/CouponeSelect"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="275dp"
+                android:layout_height="42dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:hint="쿠폰"
                 app:layout_constraintEnd_toStartOf="@+id/CouponeCouponeInput"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CouponeTitle">
-
-                <AutoCompleteTextView
-                    android:id="@+id/CouponCouponSelect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/CouponeTitle" />
 
             <Button
                 android:id="@+id/CouponeCouponeInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="등록"
+                android:text="쿠폰등록"
                 app:layout_constraintBottom_toBottomOf="@+id/CouponeSelect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/CouponeSelect" />
@@ -80,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="등록"
+                android:text="포인트등록"
                 app:layout_constraintBottom_toBottomOf="@+id/CouponePoint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/CouponePoint" />

@@ -71,6 +71,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //PayPage로 넘어가는 바이패스
+        val temp = Intent(this,PayPage::class.java)
+        startActivity(temp)
+
         binding.MainSign.setOnClickListener {
             val signIn = Intent(this,SignInActivity::class.java)
             startActivity(signIn)
