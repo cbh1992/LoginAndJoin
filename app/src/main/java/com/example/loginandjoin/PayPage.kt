@@ -1,5 +1,6 @@
 package com.example.loginandjoin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -104,6 +105,13 @@ class PayPage : AppCompatActivity() {
                     deliverTable.text.toString().toInt()
             totalAllTable.text = totalAllCost.toString()
 
-
+            val cancel = findViewById<Button>(R.id.PayCancel)
+            cancel.setOnClickListener { finish() }
+            val keep = findViewById<Button>(R.id.PayKeep)
+            keep.setOnClickListener {
+                Toast.makeText(this,"click", Toast.LENGTH_SHORT).show()
+                val click = Intent(this,Payment::class.java)
+                startActivity(click)
+            }
     }
 }
