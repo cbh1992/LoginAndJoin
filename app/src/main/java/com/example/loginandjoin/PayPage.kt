@@ -90,9 +90,20 @@ class PayPage : AppCompatActivity() {
             val deliverTable = findViewById<TextView>(R.id.TotalDeliverInt)
             deliverTable.text = 3000.toString()
 
-//            //총합
-//            val totalAllTable = findViewById<TextView>(R.id.TotalAllInt)
-//            val totalAllCost : Int = costOrigin - totalcouponeTable.text.toString().toInt() - totalpointTable.text.toString().toInt() + deliverTable.text.toString().toInt()
-//            totalAllTable.text = totalAllCost.toString()
+            //총합
+            val totalAllTable = findViewById<TextView>(R.id.TotalAllInt)
+            val totalAllCost : Int = costOrigin -
+                    try{ totalcouponeTable.text.toString().toInt() }
+                     catch (e: NumberFormatException){
+                         0
+                     } -
+                    try{ totalpointTable.text.toString().toInt() }
+                    catch (e: NumberFormatException){
+                        0
+                    } +
+                    deliverTable.text.toString().toInt()
+            totalAllTable.text = totalAllCost.toString()
+
+
     }
 }
