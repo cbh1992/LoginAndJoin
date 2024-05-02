@@ -16,6 +16,9 @@
         android:theme="@style/Theme.LoginAndJoin"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentCard"
+            android:exported="false" />
+        <activity
             android:name=".PayPage"
             android:exported="false" />
         <activity
